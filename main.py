@@ -1,41 +1,45 @@
-
-print("               WELCOME TO YOUR JOURNAL!", end="\n\n")
-print("Please choose the things you want to write about, or type 'exit' to exit.(select number)", end="\n\n")
-print("""1. Write about what you are grateful for today.
-2. Write about how you define happiness.
-3. Write about the things you love about yourself.
-4. Write about the things that you don't like about yourself.
-5. write a motivational letter for your future self.
+print("                       WELCOME TO YOUR JOURNAL!", end="\n\n")
+print("PLEASE CHOOSE THE THINGS YOU WANT TO WRITE ABOUT, OR TYPE 'exit' TO EXIT.(select number)", end="\n\n")
+print("""1. Write About A Gratitude Log.
+2. Write your Feelings And Thoughts.
+3. Write Things you Need to Get Done.
+4. Write The Reasons to be Proud of Yourself.
+5. Review Your Progress.
+6. You Can Write Whatever.
     """)
 
 while True:
     choice = input("<><><>: ")
     if choice == 'exit':
         break
-    elif choice == '5':
-        write = input("Write a motivational letter for your future self:\n")
-        print("Your motivational letter for your future self has been saved.\n")
-        continue
-    elif choice not in ['1', '2', '3', '4']:
-        print("Not valid, try again.\n")
-        continue
+        
 
-    i = 1
-    while choice != 'exit':
-        if choice == '1':
-            print(f"{i}.", end = "\n")
-            write = input(" ")
-        elif choice == '2':
-            print(f"{i}.", end = "\n")
-            write = input(" ")
-        elif choice == '3':
-            print(f"{i}.", end = "\n")
-            write = input(" ")
-        elif choice == '4':
-            print(f"{i}.", end = "\n")
-            write = input(" ")
+    x = int(choice)
+    choices = {
+        1: "What You Are Gratful For?",
+        2: "Your Feelings And Thoughts",
+        3: "Start Listing the Things you Need to Get Done",
+        4: "Reasons To Be Proud Of yourself?",
+        5: "Your Progress",
+        6: "Whatever In Your Mind.."
+    }
+
+    default_choices = "NOT VALID! PLEASE TRY AGAIN."
+    print(choices.get(x, default_choices))
+    entry = input("Start writing: ")
+
+    while True:
+        more_entry = input(" ")
+        if more_entry.strip():
+            entry += "\n" + more_entry
+        else:
+            break
+
+    print("Entry saved/processed.")
+
+
+
      
-        i += 1
        
          
     
