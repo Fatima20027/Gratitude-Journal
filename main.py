@@ -9,11 +9,10 @@ print("""1. Write About A Gratitude Log.
     """)
 
 while True:
-    choice = input("<><><>: ")
+    choice = input("<><><><><><><>: ")
     if choice == 'exit':
         break
         
-
     x = int(choice)
     choices = {
         1: "What You Are Gratful For?",
