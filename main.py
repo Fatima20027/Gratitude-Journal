@@ -34,6 +34,10 @@ while True:
         else:
             break
 
+    filename = "Your_writing_Journal.txt"
+    with open(filename, 'a') as file:
+        file.write(entry + '\n\n')
+
     print("Entry saved/processed.")
 
 
